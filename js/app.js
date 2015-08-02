@@ -13,14 +13,17 @@ App.IndexRoute = Ember.Route.extend({
   }
 });
 
+App.CasesIndexRoute = Ember.Route.extend({
+    model: function() {
+        return App.Case.find();
+    }
+});
 
 App.CasesRoute = Ember.Route.extend({
     model: function() {
       return App.Case.find();
     }
-
 });
-
 
 App.Case = DS.Model.extend({
     app_uid: DS.attr('string'),

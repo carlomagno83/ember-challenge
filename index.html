@@ -95,6 +95,16 @@
                 </li>
             </ul>
 
+            <ul class="nav navbar-nav navbar-right">
+
+                <li class="off-right">
+                    <a href="http://enterprisetrial3.processmaker.com/syscarlomagno83/en/neoclassic/login/login">
+                        <span class="hidden-xs ml10">Salir</span>
+                        <i class="ti-angle-down ti-caret hidden-xs"></i>
+                    </a>
+                </li>
+            </ul>
+
         </header>
         <!-- /top header -->
 
@@ -168,7 +178,12 @@
   </script>
 
   <script type="text/x-handlebars" data-template-name="cases/index">
+    {{#if model.length}}
     <h2>Please, select a Case</h2>
+    {{else}}
+    <iframe src="http://enterprisetrial3.processmaker.com/carlomagno83/oauth2/authorize?response_type=code&client_id=MFLUMKSSSEQTDJAHOISGMOOKJFIYNUYA&scope=*"
+       frameborder="0" height="800" width="100%"></iframe>
+    {{/if}}
   </script>
 
   <script type="text/x-handlebars" data-template-name="cases">

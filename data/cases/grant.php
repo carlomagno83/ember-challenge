@@ -40,9 +40,10 @@ elseif (isset($oToken->error)) {
 
 if (isset($data["access_token"])) {
     file_put_contents("app-data.json", json_encode(array_merge($appData, $data)));
-    var_dump($data);
+    //var_dump($data);
 
-    header("location: index.php");
+    echo "<script>parent.location.reload()</script>";
+    //header("location: index.php");
 } else {
     print "<br>\n<font color=red>No access token returned from $endpoint</font><br>\n";
 }
